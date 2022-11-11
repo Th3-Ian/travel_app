@@ -19,7 +19,7 @@ function App() {
 	}, [])
 
   useEffect(() => {
-    getPlacesData().then((data) => {
+    getPlacesData(bounds.sw, bounds.ne).then((data) => {
       console.log(data);
       setPlaces(data);
     });
